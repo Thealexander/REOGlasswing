@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>Narrativo</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/3C5F0055-B1D8-429D-AAA1-F5EFFA76830A" uiVersion="1" version="1" name="Narrativo">
+					<ID />
+					<question21 />
+					<question3 />
+					<question5 jr:template="">
+						<question6 />
+						<question7 />
+						<question8 />
+						<question9 />
+						<question10 />
+					</question5>
+					<Periodo1 />
+					<periodo2 />
+					<Label1 />
+					<Descripcion vellum:comment="Describir que actividades se realizaron durante el periodo de tiempo en que se han llevado a cabo las actividades" />
+					<question1 />
+					<question2 />
+					<question4 />
+					<label2 />
+					<cantidadclubsactivos />
+					<question11 />
+					<Otros />
+					<question14 />
+					<question15 />
+					<question17 />
+					<Multimedia />
+					<question24 />
+					<foto1 />
+					<question25 />
+					<frase2 />
+				</data>
+			</instance>
+			<bind vellum:nodeset="#form/ID" nodeset="/data/ID" type="xsd:string" constraint=". &lt; 100000000000 and . &gt; 10000000000" required="true()" />
+			<bind vellum:nodeset="#form/question21" nodeset="/data/question21" required="true()" />
+			<bind vellum:nodeset="#form/question3" nodeset="/data/question3" type="xsd:int" />
+			<bind vellum:nodeset="#form/question5" nodeset="/data/question5" />
+			<bind vellum:nodeset="#form/question5/question6" nodeset="/data/question5/question6" type="xsd:string" />
+			<bind vellum:nodeset="#form/question5/question7" nodeset="/data/question5/question7" type="xsd:string" />
+			<bind vellum:nodeset="#form/question5/question8" nodeset="/data/question5/question8" type="xsd:string" />
+			<bind vellum:nodeset="#form/question5/question9" nodeset="/data/question5/question9" type="xsd:string" />
+			<bind vellum:nodeset="#form/question5/question10" nodeset="/data/question5/question10" type="xsd:string" vellum:relevant="#form/question5/question9 = Yes" relevant="/data/question5/question9 = Yes" />
+			<bind vellum:nodeset="#form/Periodo1" nodeset="/data/Periodo1" type="xsd:date" required="true()" />
+			<bind vellum:nodeset="#form/periodo2" nodeset="/data/periodo2" type="xsd:date" required="true()" />
+			<bind vellum:nodeset="#form/Label1" nodeset="/data/Label1" />
+			<bind vellum:nodeset="#form/Descripcion" nodeset="/data/Descripcion" vellum:relevant="#form/question1 = #form/question1" relevant="/data/question1 = /data/question1" />
+			<bind vellum:nodeset="#form/question1" nodeset="/data/question1" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/question2" nodeset="/data/question2" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/question4" nodeset="/data/question4" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/label2" nodeset="/data/label2" />
+			<bind vellum:nodeset="#form/cantidadclubsactivos" nodeset="/data/cantidadclubsactivos" vellum:calculate="#form/question5/question7" calculate="/data/question5/question7" />
+			<bind vellum:nodeset="#form/question11" nodeset="/data/question11" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/Otros" nodeset="/data/Otros" />
+			<bind vellum:nodeset="#form/question14" nodeset="/data/question14" type="xsd:string" />
+			<bind vellum:nodeset="#form/question15" nodeset="/data/question15" type="xsd:string" />
+			<bind vellum:nodeset="#form/question17" nodeset="/data/question17" type="xsd:string" />
+			<bind vellum:nodeset="#form/Multimedia" nodeset="/data/Multimedia" />
+			<bind vellum:nodeset="#form/question24" nodeset="/data/question24" type="binary" required="true()" />
+			<bind vellum:nodeset="#form/foto1" nodeset="/data/foto1" type="xsd:string" />
+			<bind vellum:nodeset="#form/question25" nodeset="/data/question25" type="binary" required="true()" />
+			<bind vellum:nodeset="#form/frase2" nodeset="/data/frase2" type="xsd:string" />
+			<itext>
+				<translation lang="en" default="">
+					<text id="ID-label">
+						<value>Ingrese su numero de Cedula</value>
+					</text>
+					<text id="question21-label">
+						<value>Seleccion tipo de Registro</value>
+					</text>
+					<text id="question21-choice1-label">
+						<value>Semestral</value>
+					</text>
+					<text id="question21-choice2-label">
+						<value>Trimestral</value>
+					</text>
+					<text id="question3-label">
+						<value>Cuantos Colegios tiene a cargo?</value>
+					</text>
+					<text id="question5-label">
+						<value>Preguntas de Proyecto</value>
+					</text>
+					<text id="question5/question6-label">
+						<value>¿Cual es el nombre del colegio?</value>
+					</text>
+					<text id="question5/question7-label">
+						<value>¿Cuantos Clubes estan organizados?</value>
+					</text>
+					<text id="question5/question8-label">
+						<value>Cuantos alumnos se encuentran activos?</value>
+					</text>
+					<text id="question5/question9-label">
+						<value>¿Han habido desertados?</value>
+					</text>
+					<text id="question5/question10-label">
+						<value>Menciones la cantidad que han desertado.</value>
+					</text>
+					<text id="Periodo1-label">
+						<value>Seleccionar Fecha de inicio</value>
+					</text>
+					<text id="periodo2-label">
+						<value>Seleccionar Fecha final</value>
+					</text>
+					<text id="Label1-label">
+						<value>Actividades Principales y Logros</value>
+					</text>
+					<text id="question1-label">
+						<value>¿Qué actividades se realizaron durante el trimestre?</value>
+					</text>
+					<text id="question2-label">
+						<value>¿Cuál o cuáles son las más relevantes para el fortalecimiento de la intervención?</value>
+					</text>
+					<text id="question4-label">
+						<value>¿Qué logros se han obtenido como resultado de las actividades?</value>
+					</text>
+					<text id="label2-label">
+						<value>Próximo Mes</value>
+					</text>
+					<text id="question11-label">
+						<value>¿Qué actividades proyectadas son planeadas a realizar para los<output value="/data/cantidadclubsactivos" vellum:value="#form/cantidadclubsactivos" /> clubs activos durante las proximas semanas?</value>
+					</text>
+					<text id="question14-label">
+						<value>¿Existen necesidades que se deben cubrir para garantizar la correcta ejecución del programa?</value>
+					</text>
+					<text id="question15-label">
+						<value>Anexar hoja de incidente con datos específicos.</value>
+					</text>
+					<text id="question17-label">
+						<value>Añadir comentarios u observaciones.</value>
+					</text>
+					<text id="Multimedia-label">
+						<value>Incluir 2 frases de impacto de estudiantes, voluntarios, padre/madre de familia, docente, director, etc. Por ejemplo "Me gustan los clubes porque aprendo cosas nuevas e impresionantes…"</value>
+					</text>
+					<text id="question24-label">
+						<value>Foto1</value>
+						<value form="short"></value>
+					</text>
+					<text id="foto1-label">
+						<value>Ingrese comentario</value>
+					</text>
+					<text id="question25-label">
+						<value>Foto2</value>
+					</text>
+					<text id="frase2-label">
+						<value>Ingrese comentario</value>
+					</text>
+				</translation>
+			</itext>
+		</model>
+	</h:head>
+	<h:body>
+		<input vellum:ref="#form/ID" ref="/data/ID" appearance="numeric">
+			<label ref="jr:itext('ID-label')" />
+		</input>
+		<select vellum:ref="#form/question21" ref="/data/question21">
+			<label ref="jr:itext('question21-label')" />
+			<item>
+				<label ref="jr:itext('question21-choice1-label')" />
+				<value>choice1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('question21-choice2-label')" />
+				<value>choice2</value>
+			</item>
+		</select>
+		<input vellum:ref="#form/question3" ref="/data/question3">
+			<label ref="jr:itext('question3-label')" />
+		</input>
+		<group>
+			<label ref="jr:itext('question5-label')" />
+			<repeat vellum:jr__count="#form/question3" jr:count="/data/question3" jr:noAddRemove="true()" vellum:nodeset="#form/question5" nodeset="/data/question5">
+				<input vellum:ref="#form/question5/question6" ref="/data/question5/question6">
+					<label ref="jr:itext('question5/question6-label')" />
+				</input>
+				<input vellum:ref="#form/question5/question7" ref="/data/question5/question7">
+					<label ref="jr:itext('question5/question7-label')" />
+				</input>
+				<input vellum:ref="#form/question5/question8" ref="/data/question5/question8">
+					<label ref="jr:itext('question5/question8-label')" />
+				</input>
+				<input vellum:ref="#form/question5/question9" ref="/data/question5/question9">
+					<label ref="jr:itext('question5/question9-label')" />
+				</input>
+				<input vellum:ref="#form/question5/question10" ref="/data/question5/question10">
+					<label ref="jr:itext('question5/question10-label')" />
+				</input>
+			</repeat>
+		</group>
+		<input vellum:ref="#form/Periodo1" ref="/data/Periodo1">
+			<label ref="jr:itext('Periodo1-label')" />
+		</input>
+		<input vellum:ref="#form/periodo2" ref="/data/periodo2">
+			<label ref="jr:itext('periodo2-label')" />
+		</input>
+		<trigger vellum:ref="#form/Label1" ref="/data/Label1" appearance="minimal">
+			<label ref="jr:itext('Label1-label')" />
+		</trigger>
+		<input vellum:ref="#form/question1" ref="/data/question1">
+			<label ref="jr:itext('question1-label')" />
+		</input>
+		<input vellum:ref="#form/question2" ref="/data/question2">
+			<label ref="jr:itext('question2-label')" />
+		</input>
+		<input vellum:ref="#form/question4" ref="/data/question4">
+			<label ref="jr:itext('question4-label')" />
+		</input>
+		<trigger vellum:ref="#form/label2" ref="/data/label2" appearance="minimal">
+			<label ref="jr:itext('label2-label')" />
+		</trigger>
+		<input vellum:ref="#form/question11" ref="/data/question11">
+			<label ref="jr:itext('question11-label')" />
+		</input>
+		<trigger vellum:ref="#form/Otros" ref="/data/Otros" appearance="minimal" />
+		<input vellum:ref="#form/question14" ref="/data/question14">
+			<label ref="jr:itext('question14-label')" />
+		</input>
+		<input vellum:ref="#form/question15" ref="/data/question15">
+			<label ref="jr:itext('question15-label')" />
+		</input>
+		<input vellum:ref="#form/question17" ref="/data/question17">
+			<label ref="jr:itext('question17-label')" />
+		</input>
+		<trigger vellum:ref="#form/Multimedia" ref="/data/Multimedia" appearance="minimal">
+			<label ref="jr:itext('Multimedia-label')" />
+		</trigger>
+		<upload mediatype="image/*" vellum:ref="#form/question24" ref="/data/question24">
+			<label ref="jr:itext('question24-label')" />
+		</upload>
+		<input vellum:ref="#form/foto1" ref="/data/foto1">
+			<label ref="jr:itext('foto1-label')" />
+		</input>
+		<upload mediatype="image/*" vellum:ref="#form/question25" ref="/data/question25">
+			<label ref="jr:itext('question25-label')" />
+		</upload>
+		<input vellum:ref="#form/frase2" ref="/data/frase2">
+			<label ref="jr:itext('frase2-label')" />
+		</input>
+	</h:body>
+</h:html>
